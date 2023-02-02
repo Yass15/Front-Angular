@@ -1,0 +1,89 @@
+.column {
+  display: flex;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.mat-card {
+  margin-top: 2em;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  border: 3cm;
+  border-color: black;
+  border-radius: 1em;
+}
+section {
+  display: table;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  min-width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+  margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+.example-container {
+  width: 500px;
+  height: 300px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+  padding: 20px;
+}
+
+
+
+.column mat-card:first-child {
+  flex: 0.6;
+}
+
+.column mat-card:last-child {
+  flex: 0.4;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.left-section {
+  grid-column: 1/2;
+}
+
+.right-section {
+  grid-column: 2/3;
+}

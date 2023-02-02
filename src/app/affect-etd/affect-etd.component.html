@@ -1,0 +1,11 @@
+<mat-form-field appearance="fill">
+    <mat-label>Select a member</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option>None</mat-option>
+      <mat-option *ngFor="let element of tabEns" value="{{element.nom}}">{{element.nom}}</mat-option>
+
+      
+    </mat-select>
+  </mat-form-field>
+  
+<button mat-raised-button color="primary" (click)="add(selected)">Affecter</button>

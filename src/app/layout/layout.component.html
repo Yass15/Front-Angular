@@ -1,0 +1,83 @@
+<mat-toolbar color="primary">
+  <mat-sidenav-container [hasBackdrop]="true">
+    
+      <mat-sidenav
+        #drawer
+        fixedInViewport="true"
+        mode="side"
+        opened="false"
+        style="width: 230px"
+      >
+        <mat-nav-list>
+          <a mat-list-item routerLink="/dashboard">Dashboard</a>
+          <a mat-list-item routerLink="/members">Members</a>
+          <a mat-list-item routerLink="/tools">Tools</a>
+          <a mat-list-item routerLink="/articles">Articles</a>
+          <a mat-list-item routerLink="/Events">Events</a>
+        </mat-nav-list>
+      </mat-sidenav>
+  </mat-sidenav-container>
+
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    class="example-icon"
+    mat-icon-button
+    (click)="drawer.toggle()"
+  >
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+  <span>Lab</span>
+  <span class="example-spacer"></span>
+
+  <button [matMenuTriggerFor]="userMenu" mat-button class="example-icon">
+    <mat-icon>account_circle</mat-icon>
+    <span class="username mx-12">Username </span>
+    <mat-icon class="s-16">keyboard_arrow_down</mat-icon>
+  </button>
+
+  <mat-menu #userMenu="matMenu" [overlapTrigger]="false">
+    <button class="" mat-menu-item>
+      <mat-icon>account_box</mat-icon>
+      <span>Profile</span>
+    </button>
+    <button class="" mat-menu-item (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+
+<!--
+<p>
+  <mat-toolbar color="primary">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Lab</span>
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+-->

@@ -1,0 +1,43 @@
+<div [formGroup]="EventForm" *ngIf="EventForm"  style="margin-top: 5% ; margin-left: 1% ">
+<br />
+
+<p>
+  <label for="name">Title:</label>
+<input
+  formControlName="titre"
+  type="text"
+  id="title"
+  name="title"
+  required
+  minlength="4"
+  maxlength="18"
+  size="30"
+/>
+</p>
+<br /><br /><p>
+  <label for="name">Place:</label>
+<input
+  formControlName="lieu"
+  type="text"
+  id="Place"
+  name="Place"
+  required
+  minlength="4"
+  maxlength="18"
+  size="30"
+/>
+</p>
+<br /><br />
+<p>
+<mat-form-field appearance="fill">
+  <mat-label>Enter a date range</mat-label>
+  <mat-date-range-input [rangePicker]="picker">
+    <input matStartDate placeholder="Start date" formControlName="dateStart" />
+    <input matEndDate placeholder="End date" formControlName="dateEnd"/>
+  </mat-date-range-input>
+  <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker> </mat-form-field
+></p><br />
+<button (click)="ONSUB()">OK</button>
+</div>

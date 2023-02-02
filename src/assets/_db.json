@@ -1,0 +1,49 @@
+{
+  "members": [
+    {
+      "id": "12345",
+      "cin": "123124124",
+      "name": "yessine1",
+      "createdDate": "11/09/2022",
+      "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+      "type": "STUDENT"
+    },
+    {
+      "id": "123456",
+      "cin": "12312412",
+      "name": "yessine2",
+      "createdDate": "12/09/2022",
+      "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+      "type": "STUDENT"
+    },
+    {
+      "id": "1234567",
+      "cin": "1231241",
+      "name": "yessine3",
+      "createdDate": "13/09/2022",
+      "cv": "https://www.cdc.gov/polio/stop/pdf/stop-cv-format.pdf",
+      "type": "STUDENT"
+    }
+  ],
+
+  "articles": [
+    {
+      "IDArticle": "art1",
+      "Titre": "tit1",
+      "Annee": "2022",
+      "Auteur": ""
+    },
+    {
+      "IDArticle": "art2",
+      "Titre": "tit2",
+      "Annee": "2022",
+      "Auteur": ""
+    },
+    {
+      "IDArticle": "art3",
+      "Titre": "tit3",
+      "Annee": "2022",
+      "Auteur": ""
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+<div [formGroup]="ArticleForm" *ngIf="ArticleForm"  style="margin-top: 5% ; margin-left: 1% ">
+    <p>
+    <mat-form-field appearance="legacy">
+        <mat-label>TITRE</mat-label>
+        <input matInput placeholder="Title" formControlName="titre">
+      </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="legacy">
+            <mat-label>LIEN</mat-label>
+            <input matInput placeholder="Link" formControlName="lien">
+          </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>SOURCE_PDF</mat-label>
+                <input matInput placeholder="SourcePdf" formControlName="sourcePdf">
+              </mat-form-field>
+            </p>
+    <p>
+        <button (click)="ONSUB()">Submit</button>
+    </p>
+</div>

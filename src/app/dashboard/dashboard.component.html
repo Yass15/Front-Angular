@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="left-section">
+    <mat-card class="mat-elevation-z5">
+      <mat-card-header>
+        <mat-card-title>Number of Students: {{ stdNb }}</mat-card-title>
+        <mat-card-title>Number of Teachers: {{ ensNb }}</mat-card-title>
+
+        <mat-card-subtitle>tolal : {{ memNb }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-button routerLink="/members">go to members</button>
+      </mat-card-actions>
+    </mat-card>
+    <mat-card class="mat-elevation-z5">
+      <mat-card-header>
+        <mat-card-title>Publications by Member</mat-card-title>
+        <mat-card-subtitle
+          >Enter member's ID:
+          <form [formGroup]="form">
+            <mat-form-field appearance="legacy">
+              <input matInput placeholder="id" formControlName="id"
+            /></mat-form-field>
+            <button mat-button (click)="getFullMember()">Submit</button>
+          </form>
+        </mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+      <div *ngIf="fullmember != null">
+        <div *ngFor="let obj of fullmember.pubs">
+          <p><b>Id: </b>{{obj.id}}</p>
+          <p><b>Created date:</b> {{obj.date | date: "dd/MM/yyyy"}}</p>
+          <p><b>Title:</b> {{obj.titre}}</p>
+          <p><b>Link:</b> {{obj.lien}}</p>
+          <p><b>Source PDF:</b> {{obj.sourcePdf}}</p>
+          <p><b>Author:</b> {{obj.auteur}}</p>
+        </div>
+      </div>
+      </mat-card-content>
+      
+    </mat-card>
+    
+    <mat-card class="mat-elevation-z5">
+      <mat-card-header>
+        <mat-card-title>Tools by member</mat-card-title>
+        <mat-card-subtitle>Start</mat-card-subtitle>
+      </mat-card-header>
+      
+    </mat-card>
+    
+  </div>
+  <div class="right-section">
+    <div *ngFor="let obj of events">
+      <mat-card class="mat-elevation-z5">
+        <mat-card-header>
+          <mat-card-title>{{obj.titre}}</mat-card-title>
+  
+          <mat-card-subtitle>Start</mat-card-subtitle>
+          
+        </mat-card-header>
+        
+          <p><b>Id:</b> {{obj.id}}</p>
+          <p><b>Starting On:</b> {{obj.dateStart |date:"dd/MM/yyyy"}}</p>
+          <p><b>Ends On:</b> {{obj.dateEnd |date:"dd/MM/yyyy"}}</p>
+          <p><b>Place:</b> {{obj.lieu}}</p>
+          
+        <mat-card-actions>
+          <button mat-button>Subscribe</button>
+        <button mat-button>Get more info</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    
+  </div>
+</div>
+

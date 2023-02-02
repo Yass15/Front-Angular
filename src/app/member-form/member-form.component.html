@@ -1,0 +1,37 @@
+
+<div [formGroup]="MemberForm" *ngIf="MemberForm"  style="margin-top: 5% ; margin-left: 1% ">
+    <p>
+    <mat-form-field appearance="legacy">
+        <mat-label>CIN</mat-label>
+        <input matInput placeholder="cin" formControlName="cin">
+      </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="legacy">
+            <mat-label>NAME</mat-label>
+            <input matInput placeholder="name" formControlName="nom">
+          </mat-form-field>
+        </p>
+
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>PRENOM</mat-label>
+                <input matInput placeholder="last Name" formControlName="prenom">
+              </mat-form-field>
+            </p>
+    <p>
+        <mat-form-field appearance="legacy">
+            <mat-label>CV</mat-label>
+            <input matInput placeholder="cv" formControlName="cv">
+            </mat-form-field>
+        </p>
+    <p>
+        <mat-form-field appearance="legacy">
+            <mat-label>TYPE</mat-label>
+            <input matInput placeholder="type" formControlName="type_mbr">
+            </mat-form-field>
+        </p>
+    <p>
+        <button (click)="ONSUB()">Submit</button>
+    </p>
+</div>
